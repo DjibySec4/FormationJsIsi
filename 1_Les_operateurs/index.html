@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les opérateurs</title>
+</head>
+<body>
+
+
+    <script>
+        // Opérateurs d'affectation
+        x = 2;
+        y = 3;
+        y**=2;
+
+        a = "Bonjour ";
+        a += "tout le monde";
+        // alert(a);
+
+        // Opérateurs de comparasion
+        if(2 === '2')
+        {
+            // alert("Oui");
+        }
+        else 
+        {
+            // alert("Non");
+        }
+
+        // Similaire à (Opérateur ternaire)
+        2 == "2" ? console.log("Vrai") : console.log("Faux");
+
+
+        // Opérateurs logiques
+        nom = "Modou sarr";
+        ville = "Dakar";
+        nationalite = "Sénégalaise";
+        age = 12;
+        if (nationalite == "Sénégalaise" && ville == "Dakar" && age > 11 && nom != "Modou sarr" ) {
+            // alert("je suis un message test");
+        }
+
+        // Exemple sur le logical not
+        genre = prompt("Saisissez homme ou femme"); 
+        if (genre != 'homme' && genre != 'femme') {
+            alert("Saisissez homme ou femme");
+            reponse = confirm("Voulez-vous ressaisir ?");
+            if (reponse) {
+                 genre = prompt("Saisissez homme ou femme"); 
+            }
+            else 
+            {
+                alert("Opération annulée");
+            }
+        }
+        else 
+        {
+            // genre == "homme" ? alert("Je suis un homme") : alert("Je suis une femme");
+            if (genre == "homme") {
+                
+                alert("Je suis un homme");
+            }
+            else 
+            {
+                alert("Je suis une femme");
+            }
+        }
+    </script>
+</body>
+</html>

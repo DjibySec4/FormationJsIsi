@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <button onclick="toUpper()">En Majuscule</button>
+    <button onclick="toLower()">En Miniscule</button>
+    <p id="upperlower">Je suis un texte par defaut</p>
+
+    <script>
+        // La propriété length
+        console.warn("length : ");
+        texte = "Bonjour tout le monde !";
+        console.log("Le texte contient " + texte.length + " caractères.");
+
+        // La Methode slice()
+        // ----------------
+        console.warn("slice() : ");
+        // extrait = texte.slice(4, 10) //Affiche our to car position fin exclue
+        // extrait = texte.slice(4, 13) //Affiche out tout
+        // extrait = texte.slice(-12) //commence à la fin (-1)
+        extrait = texte.slice(12) //Affiche tout le reste de la chaine
+        console.log(extrait);
+
+
+        // La Methode substring()
+        console.warn("substring() : ");
+        extrait2 = texte.substring(-4, 10)
+        console.log(extrait2);
+
+        // La Methode substr()
+        console.warn("substr() : ");
+        extrait2 = texte.substr(3, 10)
+        console.log(extrait2);
+        
+        // La Methode replace()
+        console.warn("replace() : ");
+        texte2 = "Bienvenue sur Microsoft, Microsoft est cool!";
+        texte3 = "Bienvenue sur Microsoft, MicroSofT est cool!";
+        replace1 = texte2.replace("Microsoft", "Daaray Technologie");
+        replace2 = texte2.replace(/Microsoft/g, "Daaray Technologie");
+        replace3 = texte3.replace(/Microsoft/gi, "Daaray Technologie");
+        console.log(replace1);
+        console.log(replace2);
+        console.log(replace3);
+
+        // La Methode replaceAll()
+        console.warn("replaceAll() : ");
+        texte2 = texte2.replaceAll(/Microsoft/g, "Daaray Technologie");
+        console.log(texte2);
+
+        // Les methodes toLowerCase() et toUpperCase()
+        console.warn("Les methodes toLowerCase() et toUpperCase()");
+        var p = document.getElementById("upperlower");
+        console.log("Des finctions crées");
+        function toLower()
+        {
+            p.innerHTML = p.innerHTML.toLowerCase();
+        }
+        
+        function toUpper()
+        {
+            p.innerHTML = p.innerHTML.toUpperCase();
+        }
+
+        // Les methodes contact()
+        console.warn("Les methodes contact()");
+        a = "Bonjour";
+        b = " tout le monde ";
+        age = "28 ans";
+        description = "toute tankk";
+        console.log(a.concat(b, 'jai ', age, ' je suis un ', description));
+
+
+        // Les methodes trim()
+        console.warn("trim()");
+        text3 = "               je teste                     ";
+        console.log(text3);
+        console.log(text3.trim());
+
+        // Les methodes trimStart()
+        console.warn("trimStart()");
+        text4 = "               je teste                     ";
+        console.log(text4);
+        console.log(text4.trimStart());
+
+         // Les methodes trimEnd()
+        console.warn("trimEnd()");
+        text5 = "               je teste                     ";
+        console.log(text5);
+        console.log(text5.trimEnd());
+
+
+        // Les methodes padStart()
+        console.warn("padStart()");
+        age1 = "6";
+        if (age1 < 10) {
+            console.log(age1.padStart(2, "0"));
+        }
+
+        // Les methodes padEnd()
+        console.warn("padEnd()");
+        // montant = "500";
+        // montant = prompt("Entrez un montant");
+        // alert(montant + ".00")
+        // if (montant.length == 3) {
+        //     console.log(montant.padEnd(6, ".00"));
+        // }
+        // if (montant.length == 4) {
+        //     console.log(montant.padEnd(7, ".000"));
+        // }
+        // if (montant.length == 5) {
+        //     console.log(montant.padEnd(8, ".0000"));
+        // }
+
+
+        // La methde charAt()
+        console.warn("charAt()");
+        text6 = "Salut";
+        console.log( text6.charAt(3));
+
+        // La methde charCodeAt()
+        console.warn("charCodeAt()");
+        text6 = "Salut";
+        console.log( text6.charCodeAt(1));
+
+        // La methde charCodeAt()
+        console.warn("charCodeAt()");
+        text7 = "Bonjour tout le monde";
+        monTableau = text7.split(" ")
+        console.log(monTableau);
+        for (let i = 0; i < monTableau.length; i++) {
+            console.log(monTableau[i]);
+        }
+
+        // La methde indexOf()
+        console.warn("indexOf()");
+        texte7 = "Anticonstitutionnellement";
+        console.log(texte7.indexOf('t', 5));
+
+        // La methde lastIndexOf()
+        console.warn("lastIndexOf()");
+        texte8 = "Anticonstitutionnellement";
+        console.log(texte8.lastIndexOf('t'));
+
+        // La methde search()
+        console.warn("search()");
+        texte9 = "Bonjour touT le monde tout";
+        result = texte9.search(/tout/i);
+        if (result != -1) {
+            console.log("✅ Le mot tout est bien trouvé dans le texte");
+        }else 
+        {
+            console.log(" ❌ Le mot tout est n'est pas trouvé dans le texte");
+        }
+
+        // La methde match()
+        console.warn("match()");
+        console.log(texte9.match(/tout/gi)[0]);
+
+        // La methde matchAll()
+        console.warn("matchAll()");
+        console.log(texte9.matchAll(/tout/g)[0]);
+
+        // La methde includes()
+        console.warn("includes()");
+        if (texte9.includes('le')) {
+            console.log("✅ Le mot le est bien trouvé dans le texte");
+        }else 
+        {
+            console.log(" ❌ Le mot le est n'est pas trouvé dans le texte");
+        }
+
+        // La methde statsWith()
+        console.warn("statsWith()");
+        console.log(texte9.startsWith("Bonjour"));
+
+        // La methde endsWith()
+        console.warn("endsWith()");
+        console.log(texte9.endsWith("Bonjour"));
+    </script>
+</body>
+</html>

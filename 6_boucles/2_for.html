@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="p1"></p>
+
+    <script>
+        //Exemple 1 : Boucler avec toutes les expréssions 
+        // const tableauJours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi'];
+        // text = "";
+        // for (let i = 0; i < tableauJours.length; i++) {
+        //     text += tableauJours[i] + "<br>";
+        // }
+        // document.getElementById('p1').innerHTML = text;
+
+
+        //Exemple 2 : Boucler sans l'expréssion 1 (Permet d'initialiser i)
+        // const tableauJours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'];
+        // text = "";
+        // let i = 0, taille = tableauJours.length;
+        // for (; i < taille; i++) {
+        //     text += tableauJours[i] + "<br>";
+        // }
+        // document.getElementById('p1').innerHTML = text;
+
+        //Exemple 3 : Boucler sans l'expréssion 2 et 3 (qui tester la condition et incremente)
+        const tableauJours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi'];
+        text = "";
+        let i = 0, taille = tableauJours.length;
+        function test()
+        {
+            for (; ;) {
+                if (i < taille) {
+                    text += tableauJours[i] + "<br>";
+                    i++;
+                }
+                else 
+                {
+                    return;
+                    alert("ok");
+                }
+                document.getElementById('p1').innerHTML = text;
+            }
+        }
+        test();
+
+    </script>
+</body>
+</html>

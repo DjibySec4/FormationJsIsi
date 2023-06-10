@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <p class="p para1">Je suis le paragraphe 1</p>
+    <p class="p para2">Je suis le paragraphe 2</p>
+    <p class="para3">Je suis le paragraphe 3</p>
+
+    <script>
+        console.log(document.getElementsByClassName("p"));
+        collecions = document.getElementsByClassName("p");
+        for (let i = 0; i < collecions.length; i++) {
+            alert(collecions[i].innerHTML);
+            
+        }
+        // alert(document.getElementsByClassName("p")[0].tagName);
+    </script>
+</body>
+</html>

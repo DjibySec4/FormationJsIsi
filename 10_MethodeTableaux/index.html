@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button 
+        {
+            width: 100px;
+            /* height: 100px; */
+        }
+    </style>
+</head>
+<body>
+    
+    <h4>Les éléments du tableau</h4>
+    <p id="p1"></p>
+    <button onclick="addEndItem()">Ajouer Madd à la fin du tableau (push())</button>
+    <button onclick="addFirstItem()">Ajouer Toll au début du tableau (unshift())</button>
+    <button onclick="deleteLastItem()">Supprimer le dernier element (pop())</button>
+    <button onclick="deleteFirstItem()">Supprimer le premier element (shift())</button>
+    <button onclick="addDeleteItem()">addDeleteItem</button>
+    <button onclick="getTwoItem(2)">getTwoItem</button>
+    <button onclick="deleteItem(2)">Supprimer le 2em element du tab</button>
+
+    <button onclick="trierPetitGrand()">Trier du plus petit au plus grand</button>
+    <button onclick="trierGrandPetit()">Trier du plus grans au plus petit</button>
+    <button onclick="getMaxValue()">Afficher la plus grande valeur</button>
+    <button onclick="getMinValue()">Afficher la plus petite valeur</button>
+    <script>
+        tab = ["Mango", "Orange", "Apple"];
+        majContent();
+
+        function addEndItem()
+        {
+            if (!tab.includes("Madd")) {
+                taille = tab.push('Madd');
+                console.log(taille);
+                majContent()
+            }
+            else 
+            {
+                alert("Madd est déja dans le tableau");
+            }
+        }
+
+        function addFirstItem()
+        {
+            if (!tab.includes("Toll")) {
+                taille = tab.unshift('Toll');
+                console.log(taille);
+                majContent();
+            }
+            else 
+            {
+                alert("Toll est déja dans le tableau");
+            }
+        }
+
+        function deleteLastItem()
+        {
+            itemDeleted = tab.pop();
+            console.log("Vous avez supprimer " + itemDeleted);
+             majContent();
+        }
+
+        function deleteFirstItem()
+        {
+            itemDeleted = tab.shift();
+            console.log("Vous avez supprimer " + itemDeleted);
+             majContent();
+        }
+
+        function majContent()
+        {
+            document.getElementById("p1").innerHTML = tab.join(" - ");
+        }
+
+
+        function addDeleteItem()
+        {
+            if (! (tab.includes("Fruit1") || tab.includes("Fruit2"))) {  
+                tab.splice(0, 0, "Fruit1", "Fruit2");
+                majContent();
+            }
+            else 
+            {
+                tab.splice(0, 2);
+                majContent();
+            }
+        }
+
+        function getTwoItem(nbItem)
+        {
+           items = tab.slice(1, nbItem);
+           console.log(items);
+        }
+
+        function deleteItem()
+        {
+            delete tab[1];
+            console.log(tab);
+            majContent();
+        }
+
+
+        monTableau = ["Lundi", "Mardi", "Mercredi", "Jeudi"];
+        console.warn("Tableau original");
+        console.log(monTableau);
+        console.warn("Tableau trié dans l'odre alphabetique  (sort())");
+        console.log(monTableau.sort());
+        console.warn("Tableau trié inversement reverse()");
+        console.log(monTableau.reverse());
+        
+        monTableau2 = [9 , 10,20, 100, 200];
+        console.warn("Trie des nombre");
+        function trierPetitGrand()
+        {
+            console.log(monTableau2.sort(function(a, b){
+                return a-b;
+            }));
+        }
+
+        function trierGrandPetit()
+        {
+            console.log(monTableau2.reverse(function(a, b){
+                return b-a;
+            }));
+        }
+
+        console.warn("La plus grande valeur");
+        
+
+        function getMaxValue()
+        {
+            trierPetitGrand();
+            alert(monTableau2[monTableau2.length - 1])
+        }
+
+        function getMinValue()
+        {
+            trierPetitGrand();
+            alert(monTableau2[0])
+        }
+    </script>
+</body>
+</html>

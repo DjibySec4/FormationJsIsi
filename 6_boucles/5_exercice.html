@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Liste des noms</h1>
+    <p id="listeNoms"></p>
+
+    <h1>Liste des prénoms</h1>
+    <p id="listePrenoms"></p>
+
+    <h1>Liste des adresses</h1>
+    <p id="listeAdresses"></p>
+
+
+    <script>
+        const tableauPersonne = [
+            {prenom : 'Modou', nom : 'Sarr', adresse : 'Pikine'},
+            {prenom : 'Issa', nom : 'Pouye', adresse : 'Ouakam'},
+            {prenom : 'Fatou', nom : 'Gueye beug théb', adresse : 'Guediaway'},
+            {prenom : 'Maimouna', nom : 'Balde', adresse : 'Liberté 5'},
+        ];
+
+        listeNoms = "";
+        listePrenoms = "";
+        listeAdresses = "";
+
+        tableauPersonne.forEach( (objet, index, tableauOriginal) => {
+            listeNoms += objet.nom + ", ";
+            listePrenoms += objet.prenom + ", ";
+            listeAdresses += objet.adresse + ", ";
+        });
+
+        document.getElementById('listeNoms').innerHTML = listeNoms;
+        document.getElementById('listePrenoms').innerHTML = listePrenoms;
+        document.getElementById('listeAdresses').innerHTML = listeAdresses;
+
+       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Passage par referencement
+        function Personne(prenom, nom, age)
+        {
+            this.prenom = prenom;
+            this.nom = nom;
+            this.age = age;
+        }
+        var modou = new Personne("Modou", "Sarr", "12 ans");  //typeof => Object
+        var issa = new Object(); 
+
+        issa = modou;
+        issa.prenom = "Issa";
+        
+        // alert(modou.prenom);    
+
+        // Passage par valeur
+        prenomPapa = prenomMaman = "Fallou"; //typeif => String
+        prenomMaman = "Fatou";
+        alert(prenomPapa);
+        
+    </script>
+</body>
+</html>

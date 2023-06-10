@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Exemple 1 - Pour les tableau
+        var tab = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"];
+        // Recupération des données sans le destructuring
+        console.log(tab[0]);
+        console.log(tab[1]);
+        console.log(tab[2]);
+        
+        var [jour1, jour2, jour3] = tab;
+        // Recupération des données avec le destructuring
+        console.log(jour1);
+        console.log(jour2);
+        console.log(jour3);
+        var [j1, j2, ...leResteDuTableau] = tab; 
+        console.log(leResteDuTableau);
+
+        // Exemple 1 - Pour les objets
+        var users = {
+            user1 : "Modou",
+            user2 : "Issa",
+            user3 : "Fatou",
+        };
+        // Recupération des données sans le destructuring
+        console.warn("Sans le destructuring");
+        console.log(users.user1);
+        console.log(users.user2);
+        console.log(users.user3);
+        
+        // Methode 1 : Recupération des données avec le destructuring
+        var {user1, user2, user3} = users;
+        console.warn("Methode 1: Avec le destructuring");
+        console.log(user1);
+        console.log(user2);
+        console.log(user3);
+       
+        // Methode 1 : Recupération des données avec le destructuring
+        var {user1 : u1, user2:u2, user3:u3} = users;
+        console.warn("Methode 2: Avec le destructuring");
+        console.log(u1);
+        console.log(u2);
+        console.log(u3);
+
+
+        // Exemple : Avec Tableau d'objet
+        var personnes = [
+            {prenom : "Modou", nom: "Sarr", age : 12},
+            {prenom : "Issa", nom: "Pouye", age : 14},
+            {prenom : "Jean", nom: "Lankia", age : 18},
+        ];
+        // Recupération des données sans le destructuring
+        console.warn("***** Tableau d'objet - Sans destrcturing ******");
+        console.log(personnes[0].prenom);
+        console.log(personnes[1].prenom);
+        console.log(personnes[2].prenom);
+        // Recupération des données avec le destructuring
+        console.warn("***** Tableau d'objet - Avec destrcturing ******");
+        var [modou, issa, jean] = personnes; 
+        console.log(modou.prenom);
+
+    </script>
+</body>
+</html>

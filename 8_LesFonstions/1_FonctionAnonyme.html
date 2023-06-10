@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+</head>
+<body>
+    
+    <a id="lien1" href="#">Je suis le premier lien</a> <br><br>
+    <a id="lien2" href="#">Je suis le deuxieme lien</a> <br><br>
+
+    <span id="span"></span>
+
+    <script>
+        // Fonction avec un nom
+        // function maFonction(a, b, c)
+        // {
+        //     return a * b * c;
+        // }
+        // alert(maFonction(2, 3, 2));
+        
+        // Premeere méthode d'appeler une fonction anonyme
+        // var x = function(a, b, c)
+        // {
+        //     return a * b * c;
+        // }
+        // alert(x(2, 3, 2));
+
+        // Deuxieme méthode d'appeler une fonction anonyme Aavec Auto-invocation
+        // (function()
+        // {
+        //     var x = prompt("Entrer la valeur de x");
+        //     alert(`Le carré de ${x} est ${x * x}`);
+        // })();
+
+
+        // Troisieme méthode d'appeler une fonction anonyme
+        premierLien = document.getElementById("lien1");
+        deuxiemeLien = document.getElementById("lien2");
+        span = document.getElementById("span");
+
+        premierLien.addEventListener('mouseenter', function(){
+            premierLien.style.color = "red";
+            premierLien.style.fontSize = "18px";
+            premierLien.style.fontWeight = "bold";
+
+            span.style.backgroundColor = "brown";
+            span.style.color = "#fff";
+            span.innerHTML = "Vous avez selectionner le premier lien";
+        });
+        
+        deuxiemeLien.addEventListener('mouseenter', function(){
+            deuxiemeLien.style.color = "orange";
+            deuxiemeLien.style.fontSize = "18px";
+            deuxiemeLien.style.fontWeight = "bold";
+            
+            span.style.backgroundColor = "brown";
+            span.style.color = "#fff";
+            span.innerHTML = "Vous avez selectionner le deuxieme lien";
+        });
+
+
+        premierLien.addEventListener('mouseleave', () => {
+            premierLien.style.color = "";
+            premierLien.style.fontSize = "";
+            premierLien.style.fontWeight = "";
+
+            span.style.backgroundColor = "brown";
+            span.style.color = "#fff";
+            span.innerHTML = "Vous avez selectionner le premier lien";
+        });
+        
+        deuxiemeLien.addEventListener('mouseleave', () =>   {
+            deuxiemeLien.style.color = "";
+            deuxiemeLien.style.fontSize = "";
+            deuxiemeLien.style.fontWeight = "";
+            
+            span.style.backgroundColor = "brown";
+            span.style.color = "#fff";
+            span.innerHTML = "Vous avez selectionner le deuxieme lien";
+        });
+
+    </script>
+</body>
+</html>

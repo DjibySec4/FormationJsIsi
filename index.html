@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprendre JavaScript</title>
+</head>
+<body>
+
+    <!-- Exemple 1 -->
+    <p id="p1">Je suis un paragraphe</p>
+
+    <script>
+        document.getElementById('p1').innerHTML = "Contenu modifié avec js";
+        document.getElementById('p1').style.color = "red";
+        document.getElementById('p1').style.fontSize = "30px";
+
+    </script>
+
+    <!-- Exemple 2 -->
+    <button onclick="document.getElementById('img1').src='images/b.jpg'">
+        Changer image
+    </button>
+    
+    <img id="img1" src="images/a.jpeg" alt="Photo test" width="100px" height="100px">
+    
+    <button onclick="document.getElementById('img1').src='images/a.jpeg'">
+
+    </button>
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.4808452742727!2d-17.45295372486915!3d14.68537848581111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f5e6a4aaff%3A0x82ef83d0242fba27!2sMbour!5e0!3m2!1sfr!2ssn!4v1683371337098!5m2!1sfr!2ssn" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    <script>
+        function varTest() {
+            let x = 1;
+            if (true) 
+            {
+                let x = 3;
+                console.log(x);  //3
+            }
+            console.log(x); //1
+        }
+        varTest()
+    </script>
+</body>
+</html>

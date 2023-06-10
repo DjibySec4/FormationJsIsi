@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="p1"></p>
+
+    <script>
+        text = "";
+        let objetPersonne = {
+            nom : 'Sarr',
+            prenom : 'Modou',
+            adresse : 'Pikine rue 10',
+            age : 10,
+            dateNaissance : `${new Date().getDate() } / 0${new Date().getMonth()+1 } / ${new Date().getFullYear() }`
+        };
+
+        for (const index in objetPersonne) {
+            // console.log(objetPersonne);
+            text += objetPersonne[index] + "</br>";
+        }
+        document.getElementById('p1').innerHTML = text;
+    </script>
+</body>
+</html>

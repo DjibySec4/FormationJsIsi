@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="p1"></p>
+
+    <script>
+        // tab
+        texte = "";
+        const tab = tabSauvegarde = ["Lundi", "Mardi", "Mercredi", false, 19];
+        // alert(typeof tab);
+        tab[5] = "Add";
+        tab[2] = "Tddjdhdh";
+        tab.push("Valeur End");
+
+        console.log("Valeur de tab : " + tab); 
+        console.log("Valeur de tabSauvegarde: " +tabSauvegarde);
+
+        // Var
+        var a = b = 5;
+        alert(typeof a);
+        console.log("Ancienne");
+        console.log("a = " + a);
+        console.log("b = " + b);
+        a = 2;
+        console.log("Nouvelle");
+        console.log("a = " + a);
+        console.log("b = " + b);
+        // alert(tab[4]);
+
+        // Exemple - Avec la bloucle for
+        for (let i = 0; i < tab.length; i++) {
+            texte += tab[i] + "</br>";
+        }
+        // document.getElementById("p1").innerHTML = "<b>" + texte + "</b>"
+        document.getElementById("p1").innerHTML = `<b> ${texte}</b>`;
+        
+        // Exemple - Avec la bloucle forEach
+        texte = "";
+        tab.forEach(value => {
+            texte +=  value + "</br>";
+        });
+        document.getElementById("p1").innerHTML = `<b> ${texte}</b>`;
+
+        // Exemple - Avec la bloucle map
+        texte = "";
+        tab.map((value, index) => {
+            texte += `${value} est à la position: ${index} du tableau </br>` ;
+        });
+        document.getElementById("p1").innerHTML = `<b> ${texte}</b>`;
+    </script>
+</body>
+</html>

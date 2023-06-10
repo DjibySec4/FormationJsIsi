@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="p1"></p>
+
+    <script>
+        message = "L'ascenseur doit se rendre au";
+        
+        numeroEtage = prompt("Saissisez le numéro de l'atage ou l'ascenseur doit se rendre");
+        switch (parseInt(numeroEtage)) {
+            default:
+                message = "Le numéro spécifié n'existe pas !";
+                break;
+            case 0:
+                message += " rez-de-chaussé !";
+                break;
+            case 1:
+                message += " premier étage !";
+                break;
+            case 2:
+            case 3:
+                message += " deuxieme étage !";
+                break;
+        }
+        document.getElementById("p1").innerHTML = `<b> <font color='red' size='18px'> ${message} </font> </b>`;
+    </script>
+</body>
+</html>

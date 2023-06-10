@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Une variable simple
+        var a = 2;
+        // Les tableaux
+        const monTableau = ["Modou", '19 ans', false, 9, 15.3];
+        // alert(monTableau.length);
+        // Les objets
+        monObjet = {
+            nom : "Modou",
+            age : "19 ans",
+            marier : false,
+            nbEnfant : 9,
+            meilleurNote : 15.3,
+        };
+        // alert(monObjet.nom);
+        // Les cartes ou maps
+        const maCarte = new Map([
+            ['nom', 'Sarr'], 
+            [false, 0], 
+            [10, 200],
+            [10, 400],
+        ]);
+        alert(maCarte.get(10)); //affiche 400
+        alert(maCarte.set(false, 2)); //modifie la valeur de false en 2
+        alert(maCarte.size); //affiche 4
+    </script>
+</body>
+</html>
